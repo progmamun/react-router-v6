@@ -4,11 +4,12 @@ import Home from './components/Home/Home';
 import Friends from './components/Friends/Friends.jsx';
 import About from './components/About/About.jsx';
 import NotFound from './components/NotFound/NotFound.jsx';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to my fancy Routing website!!!</h1>
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/friends" element={<Friends></Friends>}></Route>

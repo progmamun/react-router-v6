@@ -11,8 +11,8 @@ const Friends = () => {
   return (
     <div>
       <h1>Hello Friends.</h1>
-      {friends.map(friends => (
-        <Friend key={friends.id}></Friend>
+      {friends.map(friend => (
+        <Friend key={friend.id} friend={friend}></Friend>
       ))}
     </div>
   );
