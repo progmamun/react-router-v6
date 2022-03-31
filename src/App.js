@@ -6,6 +6,8 @@ import About from './components/About/About.jsx';
 import NotFound from './components/NotFound/NotFound.jsx';
 import Header from './components/Header/Header';
 import FriendDetail from './components/FriendDetail/FriendDetail';
+import Posts from './components/Posts/Posts';
+import PostDetail from './components/PostDetail/PostDetail';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
           path="/friend/:friendId"
           element={<FriendDetail></FriendDetail>}
         ></Route>
+        <Route path="/posts" element={<Posts></Posts>}>
+          <Route path=":postId" element={<PostDetail></PostDetail>}></Route>
+        </Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
